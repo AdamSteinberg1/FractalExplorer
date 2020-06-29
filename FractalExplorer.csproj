@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{599E1188-7994-4EE2-BA69-FA12F1CC3B8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FractalExplorer</RootNamespace>
+    <AssemblyName>FractalExplorer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\fractalicon_MRV_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="CxFlatUI-Enhanced, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CxFlatUI-Enhanced.1.0.0.2\lib\net45\CxFlatUI-Enhanced.dll</HintPath>
+    </Reference>
+    <Reference Include="HTAlt WinForms, Version=0.1.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HTAlt.WinForms.0.1.4.2\lib\net461\HTAlt WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="HTAlt.Standart, Version=0.1.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HTAlt.Standart.0.1.4.2\lib\netstandard2.0\HTAlt.Standart.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.4.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft-WindowsAPICodePack-Core.1.1.4\lib\net472\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.4.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft-WindowsAPICodePack-Shell.1.1.4\lib\net472\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SciColorMaps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ar1st0crat.SciColorMaps.1.0.2\lib\portable40-net40+sl5+win8+wpa81\SciColorMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Win32Interop.Dwmapi, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Dwmapi.1.0.1\lib\Win32Interop.Dwmapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Gdi32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Gdi32.1.0.1\lib\Win32Interop.Gdi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Kernel32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Kernel32.1.0.1\lib\Win32Interop.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.User32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.User32.1.0.1\lib\Win32Interop.User32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Uxtheme, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Uxtheme.1.0.1\lib\Win32Interop.Uxtheme.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shader.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="shader.frag" />
+    <None Include="shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-chevron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-chevron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMePng\APIKeys.png" />
+    <Content Include="ReadMePng\Deploy.png" />
+    <Content Include="ReadMePng\MetaData.png" />
+    <Content Include="ReadMePng\Nuget.png" />
+    <Content Include="ReadMePng\NugetAPIKeys.png" />
+    <Content Include="ReadMePng\NuPackNugetPackager.png" />
+    <Content Include="ReadMePng\Options.png" />
+    <Content Include="ReadMePng\类库上右键.png" />
+    <None Include="Resources\fractalicon_MRV_icon.ico" />
+    <None Include="Resources\fractalIcon.png" />
+    <None Include="Resources\icon.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
