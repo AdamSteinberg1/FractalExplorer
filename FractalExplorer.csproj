@@ -37,9 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CustomMarshalers" />
-    <Reference Include="CxFlatUI-Enhanced, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\CxFlatUI-Enhanced.1.0.0.2\lib\net45\CxFlatUI-Enhanced.dll</HintPath>
-    </Reference>
     <Reference Include="HTAlt WinForms, Version=0.1.4.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\HTAlt.WinForms.0.1.4.2\lib\net461\HTAlt WinForms.dll</HintPath>
     </Reference>
@@ -144,17 +141,12 @@
     <None Include="Resources\right-chevron.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ReadMePng\APIKeys.png" />
-    <Content Include="ReadMePng\Deploy.png" />
-    <Content Include="ReadMePng\MetaData.png" />
-    <Content Include="ReadMePng\Nuget.png" />
-    <Content Include="ReadMePng\NugetAPIKeys.png" />
-    <Content Include="ReadMePng\NuPackNugetPackager.png" />
-    <Content Include="ReadMePng\Options.png" />
-    <Content Include="ReadMePng\类库上右键.png" />
     <None Include="Resources\fractalicon_MRV_icon.ico" />
     <None Include="Resources\fractalIcon.png" />
     <None Include="Resources\icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gifs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

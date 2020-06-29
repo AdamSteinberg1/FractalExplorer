@@ -285,7 +285,7 @@ namespace FractalExplorer
             try
             {
                 temp = float.Parse(weightText.Text);
-                weightSlider.Value = (int)(temp * (weightSlider.Maximum - weightSlider.Minimum));
+                weightSlider.Value = (int)Math.Round(temp * (weightSlider.Maximum - weightSlider.Minimum));
                 colorWeight = temp;
                 iterText.ForeColor = Color.Black;
                 glControl.Invalidate();

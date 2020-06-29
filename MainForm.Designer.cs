@@ -48,9 +48,9 @@
             this.aaSlider = new HTAlt.WinForms.HTSlider();
             this.aaText = new System.Windows.Forms.TextBox();
             this.attribution = new System.Windows.Forms.Label();
-            this.optionsPanel = new CxFlatUI.CxFlatGroupBox();
-            this.reverseSwitch = new HTAlt.WinForms.HTSwitch();
+            this.optionsPanel = new System.Windows.Forms.Panel();
             this.reverseLabel = new System.Windows.Forms.Label();
+            this.reverseSwitch = new HTAlt.WinForms.HTSwitch();
             this.headerPanel.SuspendLayout();
             this.optionsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -143,12 +143,14 @@
             // 
             this.iterSlider.BackColor = System.Drawing.SystemColors.Control;
             this.iterSlider.BorderRoundRectSize = new System.Drawing.Size(8, 8);
+            this.iterSlider.DrawSemitransparentThumb = false;
             this.iterSlider.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.iterSlider.ForeColor = System.Drawing.Color.Black;
             this.iterSlider.LargeChange = ((uint)(5u));
             this.iterSlider.Location = new System.Drawing.Point(11, 89);
             this.iterSlider.Maximum = 1000;
             this.iterSlider.Minimum = 1;
+            this.iterSlider.MouseWheelBarPartitions = 999;
             this.iterSlider.Name = "iterSlider";
             this.iterSlider.OverlayColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(157)))), ((int)(((byte)(204)))));
             this.iterSlider.Size = new System.Drawing.Size(207, 48);
@@ -183,10 +185,12 @@
             // 
             this.weightSlider.BackColor = System.Drawing.SystemColors.Control;
             this.weightSlider.BorderRoundRectSize = new System.Drawing.Size(8, 8);
+            this.weightSlider.DrawSemitransparentThumb = false;
             this.weightSlider.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.weightSlider.ForeColor = System.Drawing.Color.Black;
             this.weightSlider.LargeChange = ((uint)(5u));
             this.weightSlider.Location = new System.Drawing.Point(11, 416);
+            this.weightSlider.MouseWheelBarPartitions = 100;
             this.weightSlider.Name = "weightSlider";
             this.weightSlider.OverlayColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(157)))), ((int)(((byte)(204)))));
             this.weightSlider.Size = new System.Drawing.Size(207, 48);
@@ -233,12 +237,14 @@
             // 
             this.aaSlider.BackColor = System.Drawing.SystemColors.Control;
             this.aaSlider.BorderRoundRectSize = new System.Drawing.Size(8, 8);
+            this.aaSlider.DrawSemitransparentThumb = false;
             this.aaSlider.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.aaSlider.ForeColor = System.Drawing.Color.Black;
             this.aaSlider.LargeChange = ((uint)(5u));
             this.aaSlider.Location = new System.Drawing.Point(14, 319);
             this.aaSlider.Maximum = 5;
             this.aaSlider.Minimum = 1;
+            this.aaSlider.MouseWheelBarPartitions = 4;
             this.aaSlider.Name = "aaSlider";
             this.aaSlider.OverlayColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(157)))), ((int)(((byte)(204)))));
             this.aaSlider.Size = new System.Drawing.Size(207, 48);
@@ -290,15 +296,19 @@
             this.optionsPanel.Controls.Add(this.iterLabel);
             this.optionsPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.optionsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.optionsPanel.HeaderStyle = null;
             this.optionsPanel.Location = new System.Drawing.Point(954, 0);
             this.optionsPanel.Name = "optionsPanel";
-            this.optionsPanel.ShowText = false;
             this.optionsPanel.Size = new System.Drawing.Size(230, 661);
             this.optionsPanel.TabIndex = 3;
-            this.optionsPanel.TabStop = false;
-            this.optionsPanel.Text = "cxFlatGroupBox1";
-            this.optionsPanel.ThemeColor = System.Drawing.Color.Transparent;
+            // 
+            // reverseLabel
+            // 
+            this.reverseLabel.AutoSize = true;
+            this.reverseLabel.Location = new System.Drawing.Point(7, 212);
+            this.reverseLabel.Name = "reverseLabel";
+            this.reverseLabel.Size = new System.Drawing.Size(138, 21);
+            this.reverseLabel.TabIndex = 20;
+            this.reverseLabel.Text = "Reverse Colormap";
             // 
             // reverseSwitch
             // 
@@ -309,15 +319,6 @@
             this.reverseSwitch.Size = new System.Drawing.Size(42, 19);
             this.reverseSwitch.TabIndex = 19;
             this.reverseSwitch.CheckedChanged += new HTAlt.WinForms.HTSwitch.CheckedChangedDelegate(this.htSwitch1_CheckedChanged);
-            // 
-            // reverseLabel
-            // 
-            this.reverseLabel.AutoSize = true;
-            this.reverseLabel.Location = new System.Drawing.Point(7, 212);
-            this.reverseLabel.Name = "reverseLabel";
-            this.reverseLabel.Size = new System.Drawing.Size(138, 21);
-            this.reverseLabel.TabIndex = 20;
-            this.reverseLabel.Text = "Reverse Colormap";
             // 
             // MainForm
             // 
@@ -362,7 +363,7 @@
         private HTAlt.WinForms.HTSlider aaSlider;
         private System.Windows.Forms.TextBox aaText;
         private System.Windows.Forms.Label attribution;
-        private CxFlatUI.CxFlatGroupBox optionsPanel;
+        private System.Windows.Forms.Panel optionsPanel;
         private HTAlt.WinForms.HTSwitch reverseSwitch;
         private System.Windows.Forms.Label reverseLabel;
     }
