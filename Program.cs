@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Permissions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FractalExplorer
@@ -13,7 +10,7 @@ namespace FractalExplorer
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [SecurityPermission(SecurityAction.Demand, Flags=SecurityPermissionFlag.ControlAppDomain)]
+        [SecurityPermission(SecurityAction.Demand, Flags = SecurityPermissionFlag.ControlAppDomain)]
         [STAThread]
         static void Main()
         {
