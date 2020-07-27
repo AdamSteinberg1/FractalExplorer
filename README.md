@@ -17,7 +17,7 @@ This was built using C# Windows Forms with the following packages:
 
 ### Build Instructions
 #### If you just want to run it:
-1. Download the repo.
+1. Download the repo and unzip it.
 2. Navigate to the publish folder.
 3. Run setup.exe.
 4. If you have anti-virus software, it will block it because I am an unverified publisher. Disable your anti-virus and then run it.
