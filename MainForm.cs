@@ -79,7 +79,8 @@ namespace FractalExplorer
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
             GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
 
-            shader = new Shader("..\\..\\shader.vert", "..\\..\\shader.frag");
+           // shader = new Shader("..\\..\\vertShader.vert", "..\\..\\fragShader.frag");
+            shader = new Shader(Properties.Resources.vertShader, Properties.Resources.fragShader);
             shader.Use();
 
             VertexArrayObject = GL.GenVertexArray();
