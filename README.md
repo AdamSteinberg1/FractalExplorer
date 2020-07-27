@@ -20,8 +20,9 @@ This was built using C# Windows Forms with the following packages:
 1. Download the repo.
 2. Navigate to the publish folder.
 3. Run setup.exe.
-4. Click through the installer.
-5. Search for FractalExplorer in the Start Menu and run it!
+4. If you have anti-virus software, it will block it because I am an unverified publisher. Disable your anti-virus and then run it.
+5. Click through the installer.
+6. Search for FractalExplorer in the Start Menu and run it!
 
 #### If you want to compile it yourself:
 1. Install Visual Studio with the .NET Desktop Development Workload.
