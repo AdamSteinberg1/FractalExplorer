@@ -16,6 +16,14 @@ This was built using C# Windows Forms with the following packages:
 *  [SciColorMaps](https://www.nuget.org/packages/ar1st0crat.SciColorMaps/1.0.2?_src=template)
 
 ### Build Instructions
+#### If you just want to run it:
+1. Download the repo.
+2. Navigate to the publish folder.
+3. Run setup.exe.
+4. Click through the installer.
+5. Search for FractalExplorer in the Start Menu and run it!
+
+#### If you want to compile it yourself:
 1. Install Visual Studio with the .NET Desktop Development Workload.
 2. Clone the repo.
 3. Open FractalExplorer.sln with Visual Studio.
