@@ -1,11 +1,11 @@
-﻿using OpenTK;
-using OpenTK.Graphics.OpenGL;
+﻿using OpenTK.Graphics.OpenGL;
+using OpenTK;
+using System.Windows.Forms;
 using SciColorMaps;
-using System;
 using System.Collections.Generic;
+using System;
 using System.Drawing;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace FractalExplorer
 {
@@ -50,12 +50,12 @@ namespace FractalExplorer
 
             iterText.Text = maxIterations.ToString();
             iterSlider.Value = maxIterations;
-
+            
             aaText.Text = superSampleFactor.ToString();
             aaSlider.Value = superSampleFactor;
 
             weightText.Text = colorWeight.ToString();
-            weightSlider.Value = (int)(colorWeight * (weightSlider.Maximum - weightSlider.Minimum));
+            weightSlider.Value = (int)(colorWeight * (weightSlider.Maximum - weightSlider.Minimum)); 
         }
 
         private void glControl_Load(object sender, System.EventArgs e)
@@ -79,8 +79,7 @@ namespace FractalExplorer
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
             GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
 
-            // shader = new Shader("..\\..\\vertShader.vert", "..\\..\\fragShader.frag");
-            shader = new Shader(Properties.Resources.vertShader, Properties.Resources.fragShader);
+            shader = new Shader("..\\..\\shader.vert", "..\\..\\shader.frag");
             shader.Use();
 
             VertexArrayObject = GL.GenVertexArray();
@@ -127,7 +126,7 @@ namespace FractalExplorer
             int MouseX = e.X;
             int MouseY = Height - e.Y; //e.Y measures from the top down, but we want from the bottom up
             Vector3 position = transformationMatrix * new Vector3(MouseX, MouseY, 1.0f);
-
+            
 
             float sensitivity = 0.001f;
             float zoomFactor = 1 - e.Delta * sensitivity;
@@ -156,7 +155,7 @@ namespace FractalExplorer
         private void glControl_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
-            {
+            {                
                 float sensitivity = 1.0f;
                 float zoomAmount = transformationMatrix.M22;
                 float xOffset = (e.X - lastMouse.X) * sensitivity * zoomAmount;
@@ -208,7 +207,7 @@ namespace FractalExplorer
             {
                 expanded = false;
                 optionsPanel.Width = 0;
-
+                
                 expand_button.BackgroundImage = Properties.Resources.left_chevron;
             }
             else
@@ -276,7 +275,7 @@ namespace FractalExplorer
         private void aaSlider_ValueChanged(object sender, EventArgs e)
         {
             superSampleFactor = aaSlider.Value;
-            aaText.Text = superSampleFactor.ToString();
+            aaText.Text = superSampleFactor.ToString();      
             glControl.Invalidate();
         }
 
@@ -299,7 +298,7 @@ namespace FractalExplorer
 
         private void weightSlider_ValueChanged(object sender, EventArgs e)
         {
-            colorWeight = (float)weightSlider.Value / (weightSlider.Maximum - weightSlider.Minimum);
+            colorWeight = (float)weightSlider.Value /(weightSlider.Maximum - weightSlider.Minimum);
             weightText.Text = colorWeight.ToString();
             glControl.Invalidate();
         }

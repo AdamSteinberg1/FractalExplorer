@@ -71,35 +71,6 @@ namespace FractalExplorer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #version 330 core
-        ///out vec4 FragColor;
-        ///layout(pixel_center_integer) in vec4 gl_FragCoord;
-        ///
-        ///uniform float colorMap[768];
-        ///uniform mat3 transformationMatrix;
-        ///uniform int maxIter;
-        ///uniform float w;
-        ///uniform int supersample_factor;
-        ///uniform bool reverseColor;
-        ///
-        ///float IterateMandelbrot( in vec2 c )
-        ///{
-        ///    const float B = 2000.0;
-        ///
-        ///    float n = 1.0;
-        ///    vec2 z  = vec2(0.0);
-        ///    for( int i=1; i&lt;maxIter; i++ )
-        ///    {
-        ///        z = vec2( z.x*z.x - z.y*z.y, 2.0*z.x*z.y ) + c; // z = z² + c
-        ///        if( dot(z [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string fragShader {
-            get {
-                return ResourceManager.GetString("fragShader", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap left_chevron {
@@ -116,23 +87,6 @@ namespace FractalExplorer.Properties {
             get {
                 object obj = ResourceManager.GetObject("right_chevron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to #version 330 core
-        ///layout (location = 0) in vec3 aPosition;
-        ///
-        ///
-        ///
-        ///void main()
-        ///{
-        ///    gl_Position = vec4(aPosition, 1.0);
-        ///}.
-        /// </summary>
-        internal static string vertShader {
-            get {
-                return ResourceManager.GetString("vertShader", resourceCulture);
             }
         }
     }
