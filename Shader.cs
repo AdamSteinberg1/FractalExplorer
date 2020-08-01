@@ -1,9 +1,9 @@
-﻿using System;
+﻿using OpenTK;
+using OpenTK.Graphics.OpenGL4;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Collections.Generic;
-using OpenTK;
-using OpenTK.Graphics.OpenGL4;
 
 namespace FractalExplorer
 {
@@ -18,7 +18,7 @@ namespace FractalExplorer
         // Shaders are written in GLSL, which is a language very similar to C in its semantics.
         // The GLSL source is compiled *at runtime*, so it can optimize itself for the graphics card it's currently being used on.
         // A commented example of GLSL can be found in shader.vert
-        public Shader(string vertPath, string fragPath)
+        public Shader(string vertString, string fragString)
         {
             // There are several different types of shaders, but the only two you need for basic rendering are the vertex and fragment shaders.
             // The vertex shader is responsible for moving around vertices, and uploading that data to the fragment shader.
@@ -26,23 +26,18 @@ namespace FractalExplorer
             // The fragment shader is responsible for then converting the vertices to "fragments", which represent all the data OpenGL needs to draw a pixel.
             //   The fragment shader is what we'll be using the most here.
 
-            // Load vertex shader and compile
-            // LoadSource is a simple function that just loads all text from the file whose path is given.
-            var shaderSource = LoadSource(vertPath);
-
             // GL.CreateShader will create an empty shader (obviously). The ShaderType enum denotes which type of shader will be created.
             var vertexShader = GL.CreateShader(ShaderType.VertexShader);
 
             // Now, bind the GLSL source code
-            GL.ShaderSource(vertexShader, shaderSource);
+            GL.ShaderSource(vertexShader, vertString);
 
             // And then compile
             CompileShader(vertexShader);
 
             // We do the same for the fragment shader
-            shaderSource = LoadSource(fragPath);
             var fragmentShader = GL.CreateShader(ShaderType.FragmentShader);
-            GL.ShaderSource(fragmentShader, shaderSource);
+            GL.ShaderSource(fragmentShader, fragString);
             CompileShader(fragmentShader);
 
             // These two shaders must then be merged into a shader program, which can then be used by OpenGL.
