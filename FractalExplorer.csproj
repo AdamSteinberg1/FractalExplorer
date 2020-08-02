@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -117,6 +132,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Release\FractalExplorer.exe.config" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -128,8 +144,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="shader.frag" />
-    <None Include="shader.vert" />
+    <None Include="fragShader.frag" />
+    <None Include="vertShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -145,8 +161,46 @@
     <None Include="Resources\fractalIcon.png" />
     <None Include="Resources\icon.bmp" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Release\FractalExplorer.exe" />
+    <Content Include="bin\Release\FractalExplorer.pdb" />
+    <Content Include="bin\Release\HTAlt WinForms.dll" />
+    <Content Include="bin\Release\HTAlt.Standart.dll" />
+    <Content Include="bin\Release\Microsoft.WindowsAPICodePack.dll" />
+    <Content Include="bin\Release\Microsoft.WindowsAPICodePack.Shell.dll" />
+    <Content Include="bin\Release\Microsoft.WindowsAPICodePack.Shell.xml" />
+    <Content Include="bin\Release\Microsoft.WindowsAPICodePack.xml" />
+    <Content Include="bin\Release\OpenTK.dll" />
+    <Content Include="bin\Release\OpenTK.GLControl.dll" />
+    <Content Include="bin\Release\OpenTK.GLControl.pdb" />
+    <Content Include="bin\Release\OpenTK.GLControl.xml" />
+    <Content Include="bin\Release\OpenTK.pdb" />
+    <Content Include="bin\Release\OpenTK.xml" />
+    <Content Include="bin\Release\SciColorMaps.dll" />
+    <Content Include="bin\Release\System.Drawing.Common.dll" />
+    <Content Include="bin\Release\Win32Interop.Dwmapi.dll" />
+    <Content Include="bin\Release\Win32Interop.Dwmapi.pdb" />
+    <Content Include="bin\Release\Win32Interop.Gdi32.dll" />
+    <Content Include="bin\Release\Win32Interop.Gdi32.pdb" />
+    <Content Include="bin\Release\Win32Interop.Gdi32.xml" />
+    <Content Include="bin\Release\Win32Interop.Kernel32.dll" />
+    <Content Include="bin\Release\Win32Interop.Kernel32.pdb" />
+    <Content Include="bin\Release\Win32Interop.User32.dll" />
+    <Content Include="bin\Release\Win32Interop.User32.pdb" />
+    <Content Include="bin\Release\Win32Interop.Uxtheme.dll" />
+    <Content Include="bin\Release\Win32Interop.Uxtheme.pdb" />
     <Content Include="gifs\demo1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

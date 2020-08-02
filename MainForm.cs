@@ -20,22 +20,19 @@ namespace FractalExplorer
         private int superSampleFactor = 3;
         private float colorWeight = 1.0f;
         private bool reverseColor;
-        private int warningThreshold = 300;
+        private const int warningThreshold = 300;
         private bool dragging = false;
         private Point lastMouse;
         private bool expanded = true;
         ColorMap cmap;
-
-        float[] vertices = //our rectangle
+        readonly float[] vertices = //our rectangle
 {
              1.0f,  1.0f, 0.0f,  // top right
              1.0f, -1.0f, 0.0f,  // bottom right
             -1.0f, -1.0f, 0.0f,  // bottom left
             -1.0f,  1.0f, 0.0f   // top left
         };
-
-
-        uint[] indices =
+        readonly uint[] indices =
         {  // note that we start from 0!
             0, 1, 3,   // first triangle
             1, 2, 3    // second triangle
@@ -79,7 +76,7 @@ namespace FractalExplorer
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
             GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
 
-            shader = new Shader("..\\..\\shader.vert", "..\\..\\shader.frag");
+            shader = new Shader(Properties.Resources.vertShader, Properties.Resources.fragShader);
             shader.Use();
 
             VertexArrayObject = GL.GenVertexArray();

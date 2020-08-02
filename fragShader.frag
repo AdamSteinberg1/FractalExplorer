@@ -1,4 +1,4 @@
-#version 330 core
+#version 460 core
 out vec4 FragColor;
 layout(pixel_center_integer) in vec4 gl_FragCoord;
 
